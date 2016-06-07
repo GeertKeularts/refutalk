@@ -4,3 +4,4 @@ class DutchiesController < ApplicationController
     @dutchies = User.where(kind: "dutchie")
   end
 end
+# test
