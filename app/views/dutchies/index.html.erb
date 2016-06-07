@@ -1,7 +1,10 @@
 <h1>REFUTALK</h1>
 <p>Here is a list of all Dutchies waiting to share their Dutch with you!</p>
 
+<%#= @dutchies %>
+
 <% @dutchies.each do |dutchie| %>
-  <%= dutchie.name %> <br>
+  <%= dutchie.photo %>
+  <%= dutchie.username %> <br>
   <%= dutchie.description %>
 <% end %>
