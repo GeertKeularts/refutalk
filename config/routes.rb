@@ -2,17 +2,20 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :dutchies, only: [:index, :show] do
-    resources :requests, only: [:new, :create]
+    resources :offers, only: [:new, :create]
   end
 
+  resources :profile, only: [:show, :edit, :update]
+
   namespace :dutchies do
-    resources :requests, only: [:index] do
+    resources :offers, only: [:index] do
       member do
         patch :accept
         patch :refuse
       end
     end
   end
+
 
 
   namespace :refugees do
