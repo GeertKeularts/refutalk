@@ -1,6 +1,18 @@
 .avatar {
+  letter-spacing: 5px;
   width: 30px;
   border-radius: 50%;
+  color: $dark-green;
+  text-decoration: none;
+  transition: color 200ms;
+}
+.avatar:hover {
+  color: $light-green;
+  text-decoration: none;
+}
+.avatar:active {
+  color: $dark-green;
+  text-decoration: none;
 }
 .avatar-large {
   width: 50px;
