@@ -3,6 +3,8 @@
 <p> You are a <%= @user.kind %> </p>
 <p> Your current description: <%= @user.description %></p>
 
-<p> You photo <%= @user.photo %> </p>
+<p> YouR photo</p>
+<p><img src="<%= @user.photo %>"></p>
+
 
 <%= link_to "Edit Profile", edit_profile_path(@user), class:"btn btn-warning"%>
