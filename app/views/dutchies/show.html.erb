@@ -1,10 +1,14 @@
-<img src="<%= @dutchie.photo %>" alt="">
-<h1> <%= @dutchie.username %></h1>
-<p><%= @dutchie.description %></p>
+<div class="wrapper">
+  <img src="<%= @dutchie.photo %>" alt="">
+  <h1> <%= @dutchie.username %></h1>
+  <p><%= @dutchie.description %></p>
 
-<hr>
+  <hr>
 
-<%= link_to "Send a Request", new_dutchy_offer_path(@dutchie)  %>
+  <%= link_to "Send a Request", new_dutchy_offer_path(@dutchie)  %>
+</div>
 
 
 
+
+ 
