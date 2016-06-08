@@ -14,11 +14,20 @@
           ultrices. Nulla bibendum mauris quis velit finibus, sed venenatis. 
         </div>
         <div class="button-center">
+        <% if signed_in? %>
+          <% else %>
           <%= link_to(new_user_registration_path) do  %>
           <div class="btn sign-in-button">
-            SIGN IN
+            SIGN UP
           </div>
           <% end  %>
+        <% end %>
+        </div>
+        <div class="dutchy-list">
+          <hr>
+          <h2 class="text-center">
+            THE DUTCHIES
+          </h2>
         </div>
       </div>
     </div>
