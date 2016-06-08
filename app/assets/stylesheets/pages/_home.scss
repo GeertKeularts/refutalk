@@ -1,4 +1,10 @@
-/* -------------------------------------
- * CSS code specific to home page
- * (margin/padding adjustments)
- * ------------------------------------- */
+h1 {
+  font-size: 75px;
+  font-weight: 700;
+  letter-spacing: 37px;
+  color: $dark-green;
+}
+
+.title {
+  margin-top: 50px;
+}
