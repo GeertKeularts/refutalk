@@ -50,19 +50,21 @@
 
 /* Navbar right button */
 .navbar-wagon-button {
+  text-align: center;
   margin-left: 10px;
   padding: 0 20px;
-  border-radius: 20em;
+  border-radius: 1px;
   line-height: 40px;
-  background-color: #D23333;
-  color: white;
+  color: $dark-green;
   font-size: 14px;
-  border: 2px solid #D23333;
+  font-weight: bold;
+  border: 1px solid $dark-green;
+  letter-spacing: 5px;
+  transition: color 200ms;
 }
 .navbar-wagon-button:hover {
   color: white;
-  background: #D23333;
-  border-color: #ac2626;
+  background: $dark-green;
 }
 
 /* Navbar search form */
@@ -94,9 +96,6 @@
   padding: 0 10px;
   font-size: 14px;
   outline: none;
-}
-.navbar-wagon-search-input:focus  {
-  border: 1px solid #CCCCCC;
 }
 
 /* Navbar dropdown menu */
