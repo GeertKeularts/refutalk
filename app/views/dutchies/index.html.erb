@@ -4,7 +4,9 @@
 <%#= @dutchies %>
 
 <% @dutchies.each do |dutchie| %>
-  <%= dutchie.photo %>
+ <img src="<%= dutchie.photo %>" alt="<%=dutchie.username%>">  <br>
   <%= dutchie.username %> <br>
-  <%= dutchie.description %>
+  <%= dutchie.description %> <br>
+  <%= link_to "Go to this profile", dutchy_path(dutchie)  %> <br>
+  <hr>
 <% end %>
