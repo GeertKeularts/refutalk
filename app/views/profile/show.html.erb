@@ -1,8 +1,8 @@
-<h1>Profile#show</h1>
-<p>Find me in app/views/profile/show.html.erb</p>
-<p> You are: </p>
-<%= @person.username %>
+<h1>YOUR OWN PROFILE</h1>
+<p> You NAME:<%= @user.username %> </p>
+<p> You are a <%= @user.kind %> </p>
+<p> Your current description: <%= @user.description %></p>
 
-<p> You are a <%= @person.kind %> </p>
-<p> Your current description:</p>
-<%= @person.description %>
+<p> You photo <%= @user.photo %> </p>
+
+<%= link_to "Edit Profile", edit_profile_path(@user), class:"btn btn-warning"%>
