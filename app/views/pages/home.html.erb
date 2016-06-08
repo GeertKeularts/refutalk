@@ -1,1 +1,35 @@
-<h1> HOME </h1>
+<div class="wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class= title>
+          <h1 class= text-center >Refugee talk</h1>
+        </div>
+        <div class="connect text-center">
+          <h2>CONNECT</h2>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras euismod sapien lacus, varius suscipit orci
+          posuere vitae. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+          Phasellus sit amet feugiat augue. Donec turpis sapien, sagittis sit amet mattis id, interdum sit amet lectus.
+          Pellentesque venenatis lectus leo, id porttitor erat feugiat et. Nullam auctor leo eu nibh pulvinar euismod. Etiam iaculis varius
+          ultrices. Nulla bibendum mauris quis velit finibus, sed venenatis.
+        </div>
+        <div class="button-center">
+        <% if signed_in? %>
+          <% else %>
+          <%= link_to(new_user_registration_path) do  %>
+          <div class="btn sign-in-button">
+            SIGN UP
+          </div>
+          <% end  %>
+        <% end %>
+        </div>
+        <div class="dutchy-list">
+          <hr>
+          <h2 class="text-center">
+            THE DUTCHIES
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

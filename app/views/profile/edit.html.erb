@@ -1,0 +1,19 @@
+<h1>EDIT YOUR PROFILE </h1>
+
+
+
+  <%= form_for @user, url: profile_update_path, html: {method: :get} do |f| %>
+  <%= f.label :username %>
+  <%= f.text_field :username %>
+
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+
+  <%= f.label :kind %>
+  <%= f.text_field :kind %>
+
+  <%= f.label :photo %>
+  <%= f.text_field :photo %>
+  <%= f.submit %>
+
+  <% end %>

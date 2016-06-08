@@ -8,6 +8,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+User.destroy_all
+
 
 User.create(kind: "dutchie", email: "supercool@hotmail.com", password: "111111", password_confirmation: "111111", username: "Geert", photo: "http://unsplash.it/100/120", description: "I just really like helping people and understand why people do what they do. I talk with a limburgs accent, but thats ok")
 User.create(kind: "dutchie", email: "suupercool@hotmail.com", password: "111111", password_confirmation: "111111", username: "Maarten", photo: "http://unsplash.it/101/121", description: "I like to get to know new people. Jippiue!")

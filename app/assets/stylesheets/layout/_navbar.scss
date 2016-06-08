@@ -21,6 +21,8 @@
 /* Navbar logo */
 .navbar-wagon-brand img {
   width: 50px;
+  color: $dark-green;
+  letter-spacing: 10px;
 }
 
 /* Navbar right section (with form, links, button) */
@@ -38,7 +40,7 @@
   color: $dark-green;
   transition: color 200ms;
 }
-.navbar-wagon-item:hover {
+.navbar-wagon-item:hover,.navbar-wagon-item:focus, .navbar-wagon-item:active {
   flex: 0 1 auto;
   cursor: pointer;
   padding: 0 20px;
