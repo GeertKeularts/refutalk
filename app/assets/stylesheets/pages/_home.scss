@@ -4,7 +4,42 @@ h1 {
   letter-spacing: 37px;
   color: $dark-green;
 }
-
-.title {
+h2 {
+  font-weight: 300;
+  letter-spacing: 30px;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+.wrapper {
   margin-top: 50px;
+}
+.title {
+  margin: 50px 0px;
+}
+
+.connect {
+  margin: 75px 0px;
+  color: $dark-green;
+  padding: 0 50px;
+}
+.button-center {
+  display: flex;
+  justify-content: center;
+}
+
+.sign-in-button {
+  text-align: center;
+  margin: 50 0px;
+  padding: 20px;
+  border-radius: 1px;
+  line-height: 40px;
+  color: white;
+  background: $sand;
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  letter-spacing: 10px;
+}
+.sign-in-button:hover {
+  color: white;
 }
