@@ -20,10 +20,10 @@ Rails.application.routes.draw do
 
   namespace :refugees do
     resources :requests, only: [:index]
-  end 
+  end
 
 
 
   root to: 'pages#home'
-  
+
 end
