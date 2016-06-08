@@ -1,11 +1,6 @@
-
-<h1>TESTSTTSTST</h1>
-
-<%= form_for [@dutchie, @offer], url: dutchy_offers_path, html: { method: :get } do |f| %>
+<%= form_for [@dutchie, @offer], url: dutchy_offers_path do |f| %>
   <%= f.label :message %>
   <%= f.text_field :message %>
 
   <%= f.submit %>
 <% end %>
-
-<h2>tessssssssst</h2>

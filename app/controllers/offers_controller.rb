@@ -6,7 +6,13 @@ class OffersController < ApplicationController
   end
 
   def create
-    redirect_to dutchies_path
+    @offer = Request.new(offer_params)
+    @offer.dutchy_id = params[:dutchy_id]
+    @offer.refugee_id = current_user[:id]
+    @offer.status = "pending"
+    @offer.save!
+    redirect_to  dutchies_path
+
   end
 
 
