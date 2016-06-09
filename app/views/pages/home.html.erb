@@ -37,11 +37,13 @@
                     <div class= 'card-photo'>
                       <%= image_tag(dutchie.photo, class: 'avatar-large')  %>
                     </div>
-                    <div class='card-name'>
-                      <%= dutchie.username %> 
-                    </div>
-                    <div class="card-description">
-                      <%= dutchie.description %> 
+                    <div>
+                      <div class='card-name'>
+                        <%= dutchie.username %> 
+                      </div>
+                      <div class="card-description">
+                        <%= dutchie.description %> 
+                      </div>
                     </div>
                     <div>
                       <%= link_to "", dutchy_path(dutchie), class: 'card-link'  %>    

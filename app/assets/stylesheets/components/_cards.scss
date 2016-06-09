@@ -2,23 +2,24 @@
   background: $light-blue;
   color: $dark-green;
   position: relative;
+  display: flex;
+  align-items: center;
   height: 150px;
   margin: 10px;
   padding-right: 20px;
 }
 .card-photo {
-  position: absolute;
+  flex: 0 0 20%;
+  margin-left: 20px;
   left: 10px;
   top: 16px;
 }
 .card-name {
-  position: absolute;
   left: 105px;
   top: 16px;
   font-size: 35px
 }
 .card-description {
-  position: absolute;
   top: 65px;
   left: 108px;
   font-size: 12px;
