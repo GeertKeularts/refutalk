@@ -1,4 +1,23 @@
-
 <div class="wrapper">
-  <h1>THIS ARE YOUR REQUESTS</h1>
+<h2>Hi <%= @user.username %> <br>
+here are the requests you've send</h2>
+
+
+
+<% @requests.each do |request| %>
+<img src=" <%=  request.dutchy.photo %>" alt=" <%= request.dutchy.username %>  " class="avatar"> <br>
+<%= request.dutchy.username %> <br>
+<%= request.message %> <br>
+
+<% if request.status == "pending"%>
+  <%= request.dutchy.username  %> has not responded yet.
+<% elsif request.status == "declined" %>
+  <%= request.dutchy.username  %> declined your request.
+<% elsif request.status == "accepted" %>
+  Send an email to <a href="mailto:<%= request.dutchy.email %>"><%= request.dutchy.username  %></a>
+<% end %> <br>
+  <%= link_to "Go to the profile page of #{request.dutchy.username}", dutchy_path(request.dutchy)  %>
+<hr>
+
+<% end %>
 </div>
