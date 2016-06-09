@@ -22,11 +22,17 @@ Rails.application.routes.draw do
     end
   end
 
-
-
   namespace :refugees do
     resources :requests, only: [:index]
   end
+
+# resources :requests, only: [:index]
+#   resources :offers, only: [:index] do
+#       member do
+#         patch :accept
+#         patch :refuse
+#       end
+#     end
 
 
 
