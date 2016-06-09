@@ -5,8 +5,12 @@ class DutchiesController < ApplicationController
   end
 
   def show
-    @dutchie = User.find(params[:id])
-  end
+    if params[:id] == 'offers'
+      raise 'nee!'
+      redirect_to dutchies_offers_path()
+    else
+      @dutchie = User.find(params[:id])
+    end
 
+  end
 end
-# test
