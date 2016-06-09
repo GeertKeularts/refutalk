@@ -14,27 +14,53 @@
           ultrices. Nulla bibendum mauris quis velit finibus, sed venenatis.
         </div>
         <div class="button-center">
-        <% if signed_in? %>
+          <% if signed_in? %>
           <% else %>
           <%= link_to(new_user_registration_path) do  %>
           <div class="btn sign-in-button">
             SIGN UP
           </div>
           <% end  %>
-        <% end %>
+          <% end %>
         </div>
         <div class="dutchy-list">
           <hr>
           <h2 class="text-center">
             THE DUTCHIES
           </h2>
-          <div style="text-align:center">
-          <%=link_to "see the dutchies", dutchies_path, class:"btn btn-success" %>
+          <div class="dutchies">
+            <div class="container">
+              <div class="row">
+                <% @dutchies.each do |dutchie| %>
+                <div class="col-xs-12 col-sm-6">
+                  <div class= "card">
+                    <div class= 'card-photo'>
+                      <%= image_tag(dutchie.photo, class: 'avatar-large')  %>
+                    </div>
+                    <div class='card-name'>
+                      <%= dutchie.username %> 
+                    </div>
+                    <div class="card-description">
+                      <%= dutchie.description %> 
+                    </div>
+                    <div>
+                      <%= link_to "", dutchy_path(dutchie), class: 'card-link'  %>    
+                    </div>
+                  </div>
+                </div>
+                <% end %>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+      <div style="text-align:center">
+        <%=link_to "see the dutchies", dutchies_path, class:"btn btn-success" %>
+      </div>
     </div>
   </div>
+</div>
+</div>
 </div>
 
 

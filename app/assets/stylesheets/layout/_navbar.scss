@@ -1,6 +1,5 @@
 /* Main class */
 .navbar-wagon {
-  background: white;
   transition: all 0.3s ease;
   display: flex;
   height: 70px;
@@ -60,6 +59,7 @@
 
 /* Navbar right button */
 .navbar-wagon-button {
+  background: white;
   text-align: center;
   margin-left: 10px;
   padding: 0 20px;
