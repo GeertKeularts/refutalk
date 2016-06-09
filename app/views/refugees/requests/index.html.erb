@@ -1,6 +1,8 @@
-<br><br><br>
-<h1>Hi <%= @user.username %> <br>
-here are the requests you've send</h1>
+<div class="wrapper">
+<h2>Hi <%= @user.username %> <br>
+here are the requests you've send</h2>
+
+
 
 <% @requests.each do |request| %>
 <img src=" <%=  request.dutchy.photo %>" alt=" <%= request.dutchy.username %>  " class="avatar"> <br>
@@ -18,3 +20,4 @@ here are the requests you've send</h1>
 <hr>
 
 <% end %>
+</div>

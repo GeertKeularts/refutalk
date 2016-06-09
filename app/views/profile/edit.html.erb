@@ -11,7 +11,7 @@
   <%= f.text_field :description %>
 
   <%= f.label :kind %>
-  <%= f.text_field :kind %>
+  <%= f.select :kind, options_for_select(["refugee", "dutchie"]) %>
 
   <%= f.label :photo %>
   <%= f.text_field :photo %>

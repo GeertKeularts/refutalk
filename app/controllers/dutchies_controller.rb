@@ -9,10 +9,10 @@ class DutchiesController < ApplicationController
     @dutchie = User.find(params[:id])
   end
 
+
   private
   def find_user
     @user = User.find(current_user[:id])
   end
 
 end
-# test

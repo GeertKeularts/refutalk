@@ -1,2 +1,10 @@
+<div class="wrapper">
+  <h1>OFFERS FOR DUTCHIE</h1>
+  <table>
+    <% @offers.each do |offer| %>
+    <h2> <%=offer.message  %> </h2>
+    <h3> <%= User.find(offer.refugee_id).username %> </h3>
+    <% end %>
 
-<h1>OFFERS VAN DUTCHIE</h1>
+  </table>
+</div>
