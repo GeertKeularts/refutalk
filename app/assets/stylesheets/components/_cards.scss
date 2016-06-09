@@ -1,5 +1,6 @@
 .card {
-  background: $light-green;
+  background: $light-blue;
+  color: $dark-green;
   position: relative;
   height: 150px;
   margin: 10px;
@@ -8,18 +9,18 @@
 .card-photo {
   position: absolute;
   left: 10px;
-  top: 40px;
+  top: 16px;
 }
 .card-name {
   position: absolute;
-  left: 92px;
-  top: 10px;
+  left: 105px;
+  top: 16px;
   font-size: 35px
 }
 .card-description {
   position: absolute;
-  top: 66px;
-  left: 95px;
+  top: 65px;
+  left: 108px;
   font-size: 12px;
   padding-right: 20px;
 }
