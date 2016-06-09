@@ -13,7 +13,6 @@ class OffersController < ApplicationController
     if  @offer.save!
       redirect_to refugees_requests_path()
     else
-      raise 'mirircoru'
       redirect_to dutchy_path(@dutchie)
     end
   end
