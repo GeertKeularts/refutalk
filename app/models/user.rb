@@ -6,4 +6,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  validates :username, presence: true, uniqueness: true
+  validates :kind, :inclusion => {in: ["dutchy", "refugee"]}
+  validates :description, presence: true
+
 end
