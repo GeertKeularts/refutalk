@@ -4,11 +4,12 @@
   <p><%= @dutchie.description %></p>
 
   <hr>
-
+  <% if @user.kind == "refugee" %>
   <%= link_to "Send a Request", new_dutchy_offer_path(@dutchie)  %>
+  <% end %>
 </div>
 
 
 
 
- 
+
