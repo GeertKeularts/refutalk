@@ -7,12 +7,6 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  resources :dutchies, only: [:index, :show] do
-    resources :offers, only: [:new, :create]
-  end
-
-  resources :profile, only: [:show, :edit, :update]
-
   namespace :dutchies do
     resources :offers, only: [:index] do
       member do
@@ -21,6 +15,13 @@ Rails.application.routes.draw do
       end
     end
   end
+
+  resources :dutchies, only: [:index, :show] do
+    resources :offers, only: [:new, :create]
+  end
+
+  resources :profile, only: [:show, :edit, :update]
+
 
   namespace :refugees do
     resources :requests, only: [:index]
