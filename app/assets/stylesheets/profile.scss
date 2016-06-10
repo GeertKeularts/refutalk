@@ -1,3 +1,32 @@
-// Place all the styles related to the Profile controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.profile {
+  width: 500px;
+  background-color: rgba(195, 195, 195, 0.3 );
+  margin: 0 auto;
+  color: $dark-green;
+  text-align: center;
+  padding: 10px 20px;
+}
+.profile-title {
+  margin-bottom: 40px;
+}
+
+.profile-info {
+  text-align: left;
+  margin: 10px 30px 30px 30px;
+  font-size: 14px;
+}
+
+.info-header {
+  font-size: 16px;
+  font-weight: 700;
+}
+.edit-button {
+  background-color: $sand;
+  color: white;
+  font-weight: 700px;
+  margin-bottom: 20px;
+}
+.edit-button:hover {
+  color: white;
+}
+

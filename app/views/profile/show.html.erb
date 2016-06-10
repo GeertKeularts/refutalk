@@ -1,12 +1,17 @@
 <div class="wrapper">
-  <h1>YOUR OWN PROFILE</h1>
-  <p> You NAME:<%= @user.username %> </p>
-  <p> You are a <%= @user.kind %> </p>
-  <p> Your current description: <%= @user.description %></p>
+  <div class="profile">
+    <h3 class="profile-title">Your profile</h3>
+    <p><img src="<%= @user.photo %>" class="avatar-xl"></p>
+    <div class="profile-info">
+      <div class='info-header'>username:</div>
+      <div><%= current_user.username  %></div>
+      <br>
+      <div class='info-header'>Your description:</div>
+      <div><%= @user.description %></div>
 
-  <p> YouR photo</p>
-  <p><img src="<%= @user.photo %>"></p>
+    </div>
 
-
-  <%= link_to "Edit Profile", edit_profile_path(@user), class:"btn btn-warning"%>
+    <%= link_to "Edit Profile", edit_profile_path(@user), class:"btn edit-button"%>
+  </div>
+  
 </div>
