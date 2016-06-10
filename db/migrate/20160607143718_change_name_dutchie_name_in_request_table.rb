@@ -5,3 +5,4 @@ class ChangeNameDutchieNameInRequestTable < ActiveRecord::Migration
 end
 
 
+

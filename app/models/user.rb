@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  mount_uploader :photo, PhotoUploader
   has_many :requests, class_name: 'Request', foreign_key: :refugee_id
   has_many :offers, class_name: 'Request', foreign_key: :dutchie_id
   # Include default devise modules. Others available are:
@@ -9,6 +10,5 @@ class User < ActiveRecord::Base
   validates :username, presence: true, uniqueness: true
   validates :kind, :inclusion => {in: ["dutchie", "refugee"]}
   validates :description, presence: true
-  mount_uploader :photo, PhotoUploader
 
 end
