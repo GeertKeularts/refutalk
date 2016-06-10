@@ -4,7 +4,7 @@
     <div class="profile-info">
       <div>
 
-        <%= simple_form_for @user, url: profile_update_path do |f| %>
+        <%= simple_form_for @user, url: profile_path(@user) do |f| %>
         <%= f.input :username %>
         <%= f.input :description %>
         <%= f.input :photo %>
