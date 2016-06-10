@@ -1,9 +1,28 @@
 <div class="wrapper">
+  <div class="wraprequest">
+ <div class="conversation">
+ <div class="sender">
+ <img src=" <%= @user.photo %> " class="avatar-large"> <br>
+ <%= @user.username %>
+  </div>
+  <fa class="fa fa-arrows-h"></fa>
+  <div class="receiver">
+  <img src=" <%=  @dutchie.photo %> " class="avatar-large"> <br>
+  <%= @dutchie.username %>
+  </div>
+ </div>
+<div class="flexxr">
   <div class="newrequest">
+    <% if @offer.errors.any? %>
+    <div class="alert alert-warning"> <%= @offer.errors.messages.first[1].join %> </div>
+    <% end %>
     <%= form_for [@dutchie, @offer], url: dutchy_offers_path do |f| %>
-    <%= f.label :message %>
-    <%= f.text_field :message %>
-    <%= f.submit %>
+    <%= f.text_area :message ,:class => 'message' %>
+    <%= f.submit :class => 'btn btn-success' %>
     <% end %>
   </div>
+  </div>
+  </div>
 </div>
+
+

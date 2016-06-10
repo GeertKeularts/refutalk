@@ -1,5 +1,6 @@
 class OffersController < ApplicationController
   before_action :find_dutchie, only: [:new, :create]
+  before_action :find_user, only: [:new, :create]
 
   def new
     @offer = Request.new
@@ -13,7 +14,7 @@ class OffersController < ApplicationController
     if  @offer.save
       redirect_to refugees_requests_path()
     else
-      redirect_to dutchy_path(@dutchie)
+      render :new
     end
   end
 
@@ -21,7 +22,11 @@ class OffersController < ApplicationController
   private
 
   def find_dutchie
-    @dutchie = User.find(params[:dutchy_id]) if current_user
+    @dutchie = User.find(params[:dutchy_id])
+  end
+
+   def find_user
+    @user = User.find(current_user[:id]) if current_user
   end
 
   def offer_params
