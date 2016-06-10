@@ -21,7 +21,7 @@ class OffersController < ApplicationController
   private
 
   def find_dutchie
-    @dutchie = User.find(params[:dutchy_id])
+    @dutchie = User.find(params[:dutchy_id]) if current_user
   end
 
   def offer_params
