@@ -1,28 +1,38 @@
 <div class="wrapper">
-  <h2>Hi, <%= @user.username %> here are the requests you got</h2>
+  <p class="text-center requests">Hi, <%= @user.username %> here are the requests you got</p>
 
 
   <% @offers.each do |offer| %>
-  <img src=" <%=  offer.refugee.photo %>" alt=" <%= offer.refugee.username %>  " class="avatar"> <br>
-  <%= offer.refugee.username %> <br>
-  <%=offer.message  %> <br>
-  <%= link_to "Go to the profile page of #{offer.refugee.username}", refugee_path(offer.refugee)  %> <br>
+  <div class="card-request">
+    <div class="left">
+      <div>
+        <img src=" <%=  offer.refugee.photo %>" alt=" <%= offer.refugee.username %>  " class="avatar-large"> </div> <br>
+        <%= offer.refugee.username %> <br>
+      </div>
+      <div right>
+        <div class="message-a">
+          <%=offer.message  %>
+        </div> <br>
+        <%= link_to "Go to the profile page of #{offer.refugee.username}", refugee_path(offer.refugee)  %> <br>
 
-<!-- Show button to accept or decline if status is pending  -->
-  <% if offer.status == "pending" %>
-  <%= link_to "ACCEPT", accept_dutchies_offer_path(offer), method: :patch , class:"btn btn-success" %>
-  <%= link_to "REFUSE", refuse_dutchies_offer_path(offer), method: :patch , class:"btn btn-danger" %>
+        <!-- Show button to accept or decline if status is pending  -->
+        <% if offer.status == "pending" %>
+        <%= link_to "ACCEPT", accept_dutchies_offer_path(offer), method: :patch , class:"btn btn-success" %>
+        <%= link_to "REFUSE", refuse_dutchies_offer_path(offer), method: :patch , class:"btn btn-danger" %>
 
-  <!-- Show email of refugee if accepted -->
-  <% elsif offer.status == "accepted" %>
-  You accepted, sent <%= offer.refugee.username  %> an <a href="mailto:<%= offer.refugee.email %>"> email</a>
-  <!-- Show declinemessage if declined -->
-  <% else %>
-    You declined the offer of <%= offer.refugee.username %>
+        <!-- Show email of refugee if accepted -->
+        <% elsif offer.status == "accepted" %>
+        You accepted, sent <%= offer.refugee.username  %> an <a href="mailto:<%= offer.refugee.email %>"> email</a>
+        <!-- Show declinemessage if declined -->
+        <% else %>
+        You declined the offer of <%= offer.refugee.username %>
+        <% end %>
+      </div>
+    </div>
+
+  </div>
   <% end %>
 
-  <hr>
-  <% end %>
 
 
 
