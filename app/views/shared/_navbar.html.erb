@@ -15,7 +15,10 @@
     <%= link_to dutchies_offers_path , class: "navbar-wagon-item navbar-wagon-link" do %>
     <div class="badge-container">
       <i class="fa fa-comment"></i>
-      <div class="badge badge-blue"><%= current_user.requests.length  %></div>
+      <div class="badge badge-blue"><%= Request.where(dutchy_id: current_user[:id]).size  %>
+
+      </div>
+
     </div>
     <% end  %>
     <% else %>

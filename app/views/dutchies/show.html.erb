@@ -1,16 +1,27 @@
 <div class="wrapper">
-  <img src="<%= @dutchie.photo %>" alt="">
-  <h1> <%= @dutchie.username %></h1>
-  <p><%= @dutchie.description %></p>
 
-  <hr>
-  <% if @user != nil %>
-  <% if @user.kind == "refugee" %>
-  <%= link_to "Send a Request", new_dutchy_offer_path(@dutchie)  %>
-  <% end %>
-  <% end %>
+  <div class= "card">
+    <div class= 'card-photo'>
+    <%= image_tag(@dutchie.photo, class: 'avatar-large')  %>
+    </div>
+    <div>
+      <div class='card-name'>
+        <%= @dutchie.username %>
+      </div>
+      <div class="card-description">
+        <%= @dutchie.description %>
+      </div>
+    </div>
+    <div>
+      <% if @user != nil %>
+      <% if @user.kind == "refugee" %>
+      <%= link_to "Send a Request", new_dutchy_offer_path(@dutchie), class:"btn btn-info" %>
+      <% end %>
+      <% end %>
+    </div>
+  </div>
+
 </div>
-
 
 
 

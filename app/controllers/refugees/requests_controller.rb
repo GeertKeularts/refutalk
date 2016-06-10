@@ -8,6 +8,6 @@ class Refugees::RequestsController < ApplicationController
   private
 
   def find_user
-    @user = User.find(current_user[:id])
+    @user = User.find(current_user[:id]) if current_user
   end
 end

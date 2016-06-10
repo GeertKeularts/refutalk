@@ -1,7 +1,9 @@
 <div class="wrapper">
-  <%= form_for [@dutchie, @offer], url: dutchy_offers_path do |f| %>
-  <%= f.label :message %>
-  <%= f.text_field :message %>
-  <%= f.submit %>
-  <% end %>
+  <div class="newrequest">
+    <%= form_for [@dutchie, @offer], url: dutchy_offers_path do |f| %>
+    <%= f.label :message %>
+    <%= f.text_field :message %>
+    <%= f.submit %>
+    <% end %>
+  </div>
 </div>

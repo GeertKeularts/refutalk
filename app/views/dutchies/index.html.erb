@@ -1,15 +1,42 @@
 <div class="wrapper">
-  <h1>REFUTALK</h1>
+  <h1>DUTCHIES</h1>
   <p>Here is a list of all Dutchies waiting to share their Dutch with you!</p>
 
-  <%#= @dutchies %>
 
-  <% @dutchies.each do |dutchie| %>
-  <img src="<%= dutchie.photo %>" alt="<%=dutchie.username%>">  <br>
-  <%= dutchie.username %> <br>
-  <%= dutchie.description %> <br>
-  <%= link_to "Go to this profile", dutchy_path(dutchie)  %> <br>
-  <hr>
-  <% end %>
+  <div class="container">
+    <div class="row">
+    <% @dutchies.each do |dutchie| %>
+      <div class="col-xs-12 col-sm-6">
+        <div class= "card">
+          <div class= 'card-photo'>
+            <%= image_tag(dutchie.photo, class: 'avatar-large')  %>
+          </div>
+          <div>
+            <div class='card-name'>
+              <%= dutchie.username %>
+            </div>
+            <div class="card-description">
+              <%= dutchie.description %>
+            </div>
+          </div>
+          <div>
+            <%= link_to "", dutchy_path(dutchie), class: 'card-link'  %>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+
+
+
+
+ <!--  <% @dutchies.each do |dutchie| %>
+ <img src="<%= dutchie.photo %>" alt="<%=dutchie.username%>">  <br>
+ <%= dutchie.username %> <br>
+ <%= dutchie.description %> <br>
+ <%= link_to "Go to this profile", dutchy_path(dutchie)  %> <br>
+ <hr>
+ <% end %> -->
 </div>
 
