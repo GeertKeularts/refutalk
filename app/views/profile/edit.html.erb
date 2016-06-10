@@ -3,22 +3,19 @@
     <h3>Edit your profile </h3>
     <div class="profile-info">
       <div>
-        <%= form_for @user, url: profile_update_path, html: {method: :get} do |f| %>
-        <%= f.text_field :username %>
+
+        <%= simple_form_for @user, url: profile_update_path, html: {method: :get} do |f| %>
+        <%= f.input :username %>
+        <%= f.input :description %>
+        <%= f.input :photo %>
+        <%= f.input :photo_cache, as: :hidden %>
+        <%= f.input :description, as: :text, class: 'message' %>
+        <%= f.submit %>
+        <% end %>
+
+
       </div>
 
-      <div>
-       <%= f.text_area :description, class: 'message'%>
-     </div>
-
-     <div>
-       <%= f.text_field :photo %>
-     </div>
-     <div>
-       <%= f.submit %>
-     </div>
-   </div>
-
-   <% end %>
- </div>
+    </div>
+  </div>
 </div>

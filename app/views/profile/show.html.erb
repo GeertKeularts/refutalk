@@ -1,7 +1,7 @@
 <div class="wrapper">
   <div class="profile">
     <h3 class="profile-title">Your profile</h3>
-    <p><img src="<%= @user.photo %>" class="avatar-xl"></p>
+    <p><%= cl_image_tag @user.photo, height: 300, width: 400, crop: :fill%></p>
     <div class="profile-info">
       <div class='info-header'>username:</div>
       <div><%= current_user.username  %></div>
@@ -13,5 +13,5 @@
 
     <%= link_to "Edit Profile", edit_profile_path(@user), class:"btn edit-button"%>
   </div>
-  
+
 </div>
