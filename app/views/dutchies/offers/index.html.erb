@@ -8,6 +8,10 @@
   <% if offer.status == "pending" %>
   <%= link_to "ACCEPT", accept_dutchies_offer_path(offer), method: :patch , class:"btn btn-success" %>
   <%= link_to "REFUSE", accept_dutchies_offer_path(offer), method: :patch , class:"btn btn-danger" %>
+  <% elsif offer.status == "accepted" %>
+  You accepted, sent <%= offer.refugee.username  %> an <a href="mailto:<%= offer.refugee.email %>"> email</a>
+  <% else %>
+    You declined the offer of <%= offer.refugee.username %>
   <% end %>
   <% end %>
 
