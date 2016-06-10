@@ -1,13 +1,21 @@
 <div class="wrapper">
-<h2>Hi <%= @user.username %> <br>
-here are the requests you've send</h2>
+Hi <%= @user.username %> <br>
+here are the requests you've send</p>
 
-
+<div class="wrapper-request">
 
 <% @requests.each do |request| %>
-<img src=" <%=  request.dutchy.photo %>" alt=" <%= request.dutchy.username %>  " class="avatar"> <br>
-<%= request.dutchy.username %> <br>
-<%= request.message %> <br>
+<div class="card-request">
+  <div class="left">
+  <div>
+  <img src=" <%=  request.dutchy.photo %>" alt=" <%= request.dutchy.username %>  " class="avatar-large"> </div>
+  <div>
+  <span class="name text-center"><%= request.dutchy.username %> </span> </div>
+  </div>
+
+  <div class="right">
+  <div class="message-a"><%= request.message %></div>
+ <br>
 
 <% if request.status == "pending"%>
   <%= request.dutchy.username  %> has not responded yet.
@@ -17,7 +25,9 @@ here are the requests you've send</h2>
   Send an email to <a href="mailto:<%= request.dutchy.email %>"><%= request.dutchy.username  %></a>
 <% end %> <br>
   <%= link_to "Go to the profile page of #{request.dutchy.username}", dutchy_path(request.dutchy)  %>
-<hr>
+
+  </div>
+  </div>
 
 <% end %>
 </div>

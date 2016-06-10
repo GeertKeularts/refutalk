@@ -49,8 +49,51 @@
   background-color: rgba(255,255,255,0.5)
 }
 
-.alert {
+.alert-request {
   margin: 20px 0;
 
 }
+
+
+
+
+// list requests
+//
+.requests {
+  padding: 20px;
+  font-size: 30px;
+}
+
+.wrapper-request {
+  margin: auto;
+}
+
+.card-request {
+  padding: 20px;
+  margin: 40px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  background-color: $yellow;
+  width: 500px;
+}
+
+.name {
+  margin: auto;
+}
+
+.left {
+  padding-right: 50px;
+}
+
+.message-a {
+  border: 1px dotted $dark-green;
+  padding: 40px;
+  background-color: rgba(256,256,256,0.2);
+}
+
+.center-requests {
+  width: 500px;
+}
+
 

@@ -14,7 +14,7 @@
 <div class="flexxr">
   <div class="newrequest">
     <% if @offer.errors.any? %>
-    <div class="alert alert-warning"> <%= @offer.errors.messages.first[1].join %> </div>
+    <div class="alert alert-warning alert-request"> <%= @offer.errors.messages.first[1].join %> </div>
     <% end %>
     <%= form_for [@dutchie, @offer], url: dutchy_offers_path do |f| %>
     <%= f.text_area :message ,:class => 'message' %>

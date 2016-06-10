@@ -1,12 +1,13 @@
-<div class="wrapper">
+<div class="wrapper banner">
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
         <div class= title>
-          <h1 class= text-center >Refugee talk</h1>
+        <img src="/assets/logowithtext.png" alt="logo" class="banner-logo">
+          <!-- <h1 class= text-center >Refugee talk</h1> -->
         </div>
         <div class="connect text-center">
-          <h2>CONNECT</h2>
+          <h2>CONNECT</h2> <br>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras euismod sapien lacus, varius suscipit orci
           posuere vitae. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
           Phasellus sit amet feugiat augue. Donec turpis sapien, sagittis sit amet mattis id, interdum sit amet lectus.
@@ -23,16 +24,23 @@
           <% end  %>
           <% end %>
         </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="wrapper">
         <div class="dutchy-list">
-          <hr>
-          <h2 class="text-center">
-            THE DUTCHIES
-          </h2>
+
+
           <div class="dutchies">
+
             <div class="container">
+            <h2 class="text-center">
+            THE DUTCHIES
+          </h2> <br>
               <div class="row">
                 <% @dutchies.first(6).each do |dutchie| %>
-                <div class="col-xs-12 col-sm-6">
+                <div class="col-xs-12 col-md-6">
                   <div class= "card">
                     <div class= 'card-photo'>
                       <%= image_tag(dutchie.photo, class: 'avatar-large')  %>
