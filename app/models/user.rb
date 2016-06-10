@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   validates :username, presence: true, uniqueness: true
-  validates :kind, :inclusion => {in: ["dutchy", "refugee"]}
+  validates :kind, :inclusion => {in: ["dutchie", "refugee"]}
   validates :description, presence: true
 
 end
