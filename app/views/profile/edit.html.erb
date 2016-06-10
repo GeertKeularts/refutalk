@@ -1,19 +1,24 @@
 <div class="wrapper">
-  <h1>EDIT YOUR PROFILE </h1>
+  <div class="profile">
+    <h3>Edit your profile </h3>
+    <div class="profile-info">
+      <div>
+        <%= form_for @user, url: profile_update_path, html: {method: :get} do |f| %>
+        <%= f.text_field :username %>
+      </div>
 
+      <div>
+       <%= f.text_area :description, class: 'message'%>
+     </div>
 
+     <div>
+       <%= f.text_field :photo %>
+     </div>
+     <div>
+       <%= f.submit %>
+     </div>
+   </div>
 
-  <%= form_for @user, url: profile_update_path, html: {method: :get} do |f| %>
-  <%= f.label :username %>
-  <%= f.text_field :username %>
-
-  <%= f.label :description %>
-  <%= f.text_field :description %>
-
-
-  <%= f.label :photo %>
-  <%= f.text_field :photo %>
-  <%= f.submit %>
-
-  <% end %>
+   <% end %>
+ </div>
 </div>
