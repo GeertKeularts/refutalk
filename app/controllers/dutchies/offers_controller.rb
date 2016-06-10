@@ -1,5 +1,5 @@
 class Dutchies::OffersController < ApplicationController
-
+  before_action :find_user, only: :index
 
   def index
     @offers = Request.where(dutchy_id: current_user[:id])
@@ -16,4 +16,12 @@ class Dutchies::OffersController < ApplicationController
     @offer.update(status: "refused")
     redirect_to dutchies_offers_path
   end
+
+  private
+
+  def find_user
+    @user = User.find(current_user[:id]) if current_user
+  end
+
+
 end

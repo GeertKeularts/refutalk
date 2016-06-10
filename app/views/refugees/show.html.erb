@@ -1,0 +1,23 @@
+<div class="wrapper">
+  <img src="<%= @refugee.photo %>" alt="">
+  <h1> <%= @refugee.username %></h1>
+  <p><%= @refugee.description %></p>
+
+
+  <!-- Show button to accept or decline if status is pending  -->
+  <% if @offer %>
+  <% if @offer.status == "pending" %>
+  <%= link_to "ACCEPT", accept_dutchies_offer_path(@offer), method: :patch , class:"btn btn-success" %>
+  <%= link_to "REFUSE", refuse_dutchies_offer_path(@offer), method: :patch , class:"btn btn-danger" %>
+
+  <!-- Show email of refugee if accepted -->
+  <% elsif @offer.status == "accepted" %>
+  You accepted, sent <%= @offer.refugee.username  %> an <a href="mailto:<%= @offer.refugee.email %>"> email</a>
+  <!-- Show declinemessage if declined -->
+  <% else %>
+    You declined the offer of <%= @offer.refugee.username %>
+  <% end %>
+  <% end %>
+  <hr>
+  <%= link_to "Back to my requests", dutchies_offers_path %>
+</div>
