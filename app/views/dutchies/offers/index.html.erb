@@ -1,18 +1,27 @@
 <div class="wrapper">
-  <h1>OFFERS FOR DUTCHIE</h1>
+  <h2>Hi, <%= @user.username %> here are the requests you got</h2>
+
 
   <% @offers.each do |offer| %>
-  <h2> <%=offer.message  %> </h2>
-  <h3> <%= User.find(offer.refugee_id).username %> </h3>
-  <!-- <h3> Status: <%= offer.status %> </h3> -->
+  <img src=" <%=  offer.refugee.photo %>" alt=" <%= offer.refugee.username %>  " class="avatar"> <br>
+  <%= offer.refugee.username %> <br>
+  <%=offer.message  %> <br>
+  <%= link_to "Go to the profile page of #{offer.refugee.username}", refugee_path(offer.refugee)  %> <br>
+
+<!-- Show button to accept or decline if status is pending  -->
   <% if offer.status == "pending" %>
   <%= link_to "ACCEPT", accept_dutchies_offer_path(offer), method: :patch , class:"btn btn-success" %>
   <%= link_to "REFUSE", refuse_dutchies_offer_path(offer), method: :patch , class:"btn btn-danger" %>
+
+  <!-- Show email of refugee if accepted -->
   <% elsif offer.status == "accepted" %>
   You accepted, sent <%= offer.refugee.username  %> an <a href="mailto:<%= offer.refugee.email %>"> email</a>
+  <!-- Show declinemessage if declined -->
   <% else %>
     You declined the offer of <%= offer.refugee.username %>
   <% end %>
+
+  <hr>
   <% end %>
 
 
