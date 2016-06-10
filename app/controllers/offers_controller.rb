@@ -10,7 +10,7 @@ class OffersController < ApplicationController
     @offer.dutchy_id = params[:dutchy_id]
     @offer.refugee_id = current_user[:id]
     @offer.status = "pending"
-    if  @offer.save!
+    if  @offer.save
       redirect_to refugees_requests_path()
     else
       redirect_to dutchy_path(@dutchie)

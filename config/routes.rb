@@ -27,6 +27,8 @@ Rails.application.routes.draw do
     resources :requests, only: [:index]
   end
 
+  resources :refugees, only: :show
+
 # resources :requests, only: [:index]
 #   resources :offers, only: [:index] do
 #       member do
