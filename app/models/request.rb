@@ -5,5 +5,5 @@ class Request < ActiveRecord::Base
   validates :message, presence: true
   validates :status, :inclusion => {in: ["pending", "declined", "accepted"]}
   validates :refugee_id, :dutchy_id, presence: true
-  validates :dutchy_id, uniqueness: {scope: :refugee_id, message: "You've already send a request"}
+  validates :dutchy_id, uniqueness: {scope: :refugee_id, message: "You've already sent this Dutchie a request."}
 end

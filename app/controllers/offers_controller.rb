@@ -13,7 +13,8 @@ class OffersController < ApplicationController
     if  @offer.save
       redirect_to refugees_requests_path()
     else
-      redirect_to dutchy_path(@dutchie)
+      render :new
+      # new_dutchy_offer_path(@dutchie, @offer)
     end
   end
 
