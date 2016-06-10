@@ -9,5 +9,6 @@ class User < ActiveRecord::Base
   validates :username, presence: true, uniqueness: true
   validates :kind, :inclusion => {in: ["dutchie", "refugee"]}
   validates :description, presence: true
+  mount_uploader :photo, PhotoUploader
 
 end
