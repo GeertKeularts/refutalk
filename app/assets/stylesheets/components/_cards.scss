@@ -1,6 +1,6 @@
 .card {
   background: rgba(195, 195, 195, 0.3 );
-  color: $dark-green;
+  color: black;
   position: relative;
   display: flex;
   align-items: center;
@@ -13,10 +13,12 @@
   margin-left: 20px;
   left: 10px;
   top: 16px;
+  padding: 10px;
 }
 .card-text {
-  
+  padding: 10px;
 }
+
 .card-name {
   left: 105px;
   top: 16px;

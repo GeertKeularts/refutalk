@@ -2,27 +2,41 @@ h1 {
   font-size: 75px;
   font-weight: 700;
   letter-spacing: .19em;
-  color: $dark-green;
+  color: black;
 }
 h2 {
   font-weight: 300;
   letter-spacing: .19em;
   font-size: 40px;
   margin-bottom: 20px;
-  color: $dark-green;
+  color: black;
+  // border-bottom: 5px dotted $dark-green;
+  padding: 10px;
 
 }
 .wrapper {
   margin-top: 70px;
   min-height: 56vh;
 }
+
+.banner {
+  background-color: $yellow;
+  padding-bottom: 60px;
+}
+
 .title {
-  margin: 50px 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.banner-logo {
+  padding: 40px;
+  padding-bottom: 0px;
 }
 
 .connect {
   margin: 75px 0px;
-  color: $dark-green;
+  color: black;
   padding: 0 50px;
 }
 .button-center {
@@ -37,7 +51,7 @@ h2 {
   border-radius: 1px;
   line-height: 40px;
   color: white;
-  background: $sand;
+  background: $dark-green;
   font-size: 40px;
   font-weight: bold;
   letter-spacing: 5px;
